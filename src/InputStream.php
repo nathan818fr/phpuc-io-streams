@@ -4,7 +4,7 @@ namespace PhpUC\IO\Stream;
 /**
  * Superclass for every input stream of bytes.
  */
-abstract class InputStream
+abstract class InputStream implements Closeable
 {
     const MAX_SKIP_BUFFER_SIZE = 2048;
 
@@ -66,10 +66,7 @@ abstract class InputStream
     }
 
     /**
-     * Closes this input stream and releases any system resources associated
-     * with the stream.
-     *
-     * @throws IOException
+     * @inheritdoc
      */
     public function close()
     {

@@ -1,8 +1,6 @@
 <?php
 namespace PhpUC\IO\Stream;
 
-// TODO(nathan818): Custom endianess?
-// TODO(nathan818): Don't use machine dependent size unpack format (d, f).
 class DataInputStream extends FilterInputStream implements DataInput
 {
     private static $isBigEndian;

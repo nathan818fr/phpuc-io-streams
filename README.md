@@ -1,5 +1,7 @@
 # PHP Utiliy Collections: IO-Streams
 
+[![Build Status](https://travis-ci.org/nathan818fr/phpuc-io-streams.svg?branch=master)](https://travis-ci.org/nathan818fr/phpuc-io-streams)
+
 An IO streams library for PHP inspired by the Java IO streams API.
 Which provide a more convenient way to manipulate byte buffers in PHP.
 

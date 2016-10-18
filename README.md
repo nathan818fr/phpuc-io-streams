@@ -15,7 +15,11 @@ This library is published on packagist.org, so you can add it to your composer.j
 composer require nathan818/phpuc-io-streams
 ```
 
-## Example
+## Features
+
+TODO (In development).
+
+## Examples
 
 TODO (Yeah, I really don't want to write examples now...).
 
@@ -24,7 +28,7 @@ TODO (Yeah, I really don't want to write examples now...).
 - Follow PSR-2 coding style (https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
 - Follow java-style API
 - Do unit tests
-- Documentation public and non-overwritten functions
+- Document public and non-overwritten functions
 
 ## Credits
 

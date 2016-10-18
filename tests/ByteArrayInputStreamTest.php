@@ -1,5 +1,4 @@
 <?php
-
 namespace PhpUC\IO\Stream;
 
 use PHPUnit\Framework\TestCase;

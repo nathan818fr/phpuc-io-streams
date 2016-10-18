@@ -15,10 +15,13 @@ abstract class InputStream
      * This method blocks until input data is available, the end of the stream
      * is detected, or an exception is thrown.
      *
+     * Bytes are stored on php string. Use DataInputStream to read bytes as int.
+     *
      * @param int $len number of bytes to read
      * @return null|string the bytes string; or null if there is no more data because
      * the end of the stream has been reached
      * @throws IOException
+     * @see DataInputStream
      */
     public abstract function read(int $len = 1);
 

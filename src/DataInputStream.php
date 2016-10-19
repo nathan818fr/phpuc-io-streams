@@ -105,7 +105,7 @@ class DataInputStream extends FilterInputStream implements DataInput
         return $this->unpack('f', 4);
     }
 
-    public function readFully($len) : string
+    public function readBuf($len) : string
     {
         return $this->eofRead($len);
     }

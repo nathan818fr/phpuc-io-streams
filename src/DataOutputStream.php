@@ -75,4 +75,9 @@ class DataOutputStream extends FilterOutputStream implements DataOutput
         // TODO(nathan818): Fix
         $this->pack('d', $floatValue, 4);
     }
+
+    public function writeBuf($buf)
+    {
+        $this->write($buf);
+    }
 }

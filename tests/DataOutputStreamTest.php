@@ -5,8 +5,12 @@ use PHPUnit\Framework\TestCase;
 
 class DataOutputStreamTest extends TestCase
 {
-    private function doWriteTest($values, $writeMethod, $readMethod = null)
-    {
+    private function doWriteTest(
+        $values,
+        $writeMethod,
+        $readMethod = null,
+        $readLen = false
+    ) {
         if ($readMethod === null) {
             $readMethod = $writeMethod;
         }
@@ -24,11 +28,16 @@ class DataOutputStreamTest extends TestCase
         $is = new DataInputStream(new ByteArrayInputStream($bos->toByteArray()));
         foreach ($values as $v) {
             if (is_array($v)) {
-                $this->assertEquals($v[1], $is->{'read' . $readMethod}());
+                $v = $v[1];
+            }
+            if ($readLen) {
+                $this->assertEquals($v, $is->{'read' . $readMethod}(strlen($v)));
             } else {
                 $this->assertEquals($v, $is->{'read' . $readMethod}());
             }
         }
+
+        $this->assertEquals(null, $is->read());
     }
 
     public function testBoolean()
@@ -160,7 +169,8 @@ class DataOutputStreamTest extends TestCase
             '9',
             "\x01",
             "\x00",
-            "\xE1"
-        ], '');
+            "\xE1",
+            'somestring'
+        ], 'Buf', null, true);
     }
 }

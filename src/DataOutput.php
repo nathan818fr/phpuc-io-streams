@@ -81,5 +81,5 @@ interface DataOutput
      * @return void
      * @throws IOException
      */
-    public function write($buf);
+    public function writeBuf($buf);
 }

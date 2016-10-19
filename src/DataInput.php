@@ -126,7 +126,7 @@ interface DataInput
      * @throws EOFException
      * @throws IOException
      */
-    public function readFully($len) : string;
+    public function readBuf($len) : string;
 
     /**
      * Makes an attempt to skip over n bytes of data from the input stream.

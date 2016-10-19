@@ -23,7 +23,7 @@ class DataInputStream extends FilterInputStream implements DataInput
         return $this->endianness;
     }
 
-    private function unpack($type, $len, $noEndianess = false)
+    private function unpack($type, $len)
     {
         $buf = $this->eofRead($len);
         if ($len !== 1) {
@@ -95,11 +95,13 @@ class DataInputStream extends FilterInputStream implements DataInput
 
     public function readDouble() : int
     {
+        // TODO(nathan818): Fix
         return $this->unpack('d', 8);
     }
 
     public function readFloat() : int
     {
+        // TODO(nathan818): Fix
         return $this->unpack('f', 4);
     }
 
